@@ -1,6 +1,6 @@
 # Todo App written in Solid
 
-![Screenshot 2023-01-18 at 14 10 53](https://user-images.githubusercontent.com/1477993/213180507-5a6cf265-a56e-43ab-a111-fd289ecc0008.png)
+![Screenshot 2023-01-18 at 14 41 23](https://user-images.githubusercontent.com/1477993/213186631-9563db2c-9fcd-4506-ba58-868a1d30f6f3.png)
 
 This is just a simple todo app I've done because I've wanted to checkout Solid. TLDR: Solid is pretty awesome, so go try it! You can learn more on the [Solid Website](https://solidjs.com) or join their [Discord](https://discord.com/invite/solidjs) if you're interested.
 
