@@ -32,7 +32,7 @@ const TodoItem: Component<Props> = (props) => {
     return (
         <div
             ref={sortable.ref}
-            class="relative bg-white dark:bg-slate-800 rounded-md px-6 py-3 border border-slate-100 dark:border-slate-700 shadow-sm flex flex-row gap-4 items-center text-slate-600 dark:text-slate-200 overflow-hidden"
+            class="relative bg-white dark:bg-slate-700 rounded-md px-6 py-3 border border-slate-100 dark:border-slate-600 shadow-sm flex flex-row gap-4 items-center text-slate-600 dark:text-slate-200 overflow-hidden"
             classList={{
                 "opacity-75": sortable.isActiveDraggable,
                 "transition-transform":
@@ -73,7 +73,7 @@ const TodoItem: Component<Props> = (props) => {
                     ref={editInputRef}
                     value={todo.name}
                     use:clickOutside={() => setEditMode(false)}
-                    class="flex-1 outline-none bg-white dark:bg-slate-800"
+                    class="flex-1 outline-none bg-white dark:bg-slate-700"
                     onChange={(e) =>
                         updateTodoName(todo, e.currentTarget.value)
                     }

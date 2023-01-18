@@ -61,7 +61,7 @@ const App: Component = () => {
                         </ul>
                     </DragDropProvider>
 
-                    <div class="text-slate-400 text-sm mt-4 flex flex-col sm:flex-row items-center sm:justify-between">
+                    <div class="text-slate-400 text-sm mt-4 mb-8 flex flex-col sm:flex-row items-center sm:justify-between">
                         <div class="mb-4 sm:mb-0">
                             {remaining()} todos remaining
                         </div>
