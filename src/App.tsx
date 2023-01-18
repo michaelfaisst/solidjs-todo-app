@@ -10,7 +10,6 @@ import type { Component } from "solid-js";
 import AddTodo from "./components/AddTodo";
 import TodoItem from "./components/TodoItem";
 import { addTodo, clearCheckedTodos, moveTodo, todos } from "./store";
-import { TransitionGroup } from "solid-transition-group";
 import Header from "./components/Header";
 
 const App: Component = () => {
@@ -38,7 +37,7 @@ const App: Component = () => {
             <Header />
             <div class="flex flex-col items-center">
                 <h1 class="mt-16 mb-8 text-5xl font-extralight text-slate-700 dark:text-slate-200 tracking-tight">
-                    Todos
+                    Hey from the preview version
                 </h1>
                 <div class="w-full max-w-lg flex flex-col px-4">
                     <AddTodo onTodoCreated={addTodo} />
