@@ -74,7 +74,7 @@ const TodoItem: Component<Props> = (props) => {
                     ref={editInputRef}
                     value={todo.name}
                     use:clickOutside={() => setEditMode(false)}
-                    class="flex-1 outline-none"
+                    class="flex-1 outline-none bg-white dark:bg-slate-800"
                     onChange={(e) =>
                         updateTodoName(todo, e.currentTarget.value)
                     }
