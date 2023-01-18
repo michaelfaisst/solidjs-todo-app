@@ -1,14 +1,10 @@
-## Usage
+# Todo App written in Solid
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+![Screenshot 2023-01-18 at 14 10 53](https://user-images.githubusercontent.com/1477993/213180507-5a6cf265-a56e-43ab-a111-fd289ecc0008.png)
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+This is just a simple todo app I've done because I've wanted to checkout Solid. TLDR: Solid is pretty awesome, so go try it! You can learn more on the [Solid Website](https://solidjs.com) or join their [Discord](https://discord.com/invite/solidjs) if you're interested.
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
-
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+Deployed app can be found [here](https://todo.codenite.at)
 
 ## Available Scripts
 
