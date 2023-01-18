@@ -3,8 +3,7 @@ import {
     transformStyle,
     useDragDropContext
 } from "@thisbeyond/solid-dnd";
-import { HiOutlineX } from "solid-icons/hi";
-import { FiMenu } from "solid-icons/fi";
+import { FiMenu, FiX } from "solid-icons/fi";
 import type { Component } from "solid-js";
 import { createEffect, createSignal, Show } from "solid-js";
 import { removeTodo, togglTodo, updateTodoName } from "../store";
@@ -92,7 +91,7 @@ const TodoItem: Component<Props> = (props) => {
                 class="text-slate-400 cursor-pointer hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
                 onClick={() => removeTodo(todo)}
             >
-                <HiOutlineX />
+                <FiX />
             </div>
         </div>
     );

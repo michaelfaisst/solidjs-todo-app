@@ -11,6 +11,7 @@ import AddTodo from "./components/AddTodo";
 import TodoItem from "./components/TodoItem";
 import { addTodo, clearCheckedTodos, moveTodo, todos } from "./store";
 import { TransitionGroup } from "solid-transition-group";
+import Header from "./components/Header";
 
 const App: Component = () => {
     const ids = () => todos().map((x) => x.id);
@@ -33,44 +34,47 @@ const App: Component = () => {
     };
 
     return (
-        <div class="flex flex-col items-center">
-            <h1 class="mt-16 mb-8 text-5xl font-extralight text-slate-700 dark:text-slate-200 tracking-tight">
-                Todos
-            </h1>
-            <div class="w-full max-w-lg flex flex-col px-4">
-                <AddTodo onTodoCreated={addTodo} />
+        <>
+            <Header />
+            <div class="flex flex-col items-center">
+                <h1 class="mt-16 mb-8 text-5xl font-extralight text-slate-700 dark:text-slate-200 tracking-tight">
+                    Todos
+                </h1>
+                <div class="w-full max-w-lg flex flex-col px-4">
+                    <AddTodo onTodoCreated={addTodo} />
 
-                <DragDropProvider
-                    onDragEnd={onDragEnd}
-                    collisionDetector={closestCenter}
-                >
-                    <DragDropSensors />
-                    <ul class="mt-4">
-                        <SortableProvider ids={ids()}>
-                            <For each={todos()}>
-                                {(todo) => (
-                                    <div class="mb-2">
-                                        <TodoItem todo={todo} />
-                                    </div>
-                                )}
-                            </For>
-                        </SortableProvider>
-                    </ul>
-                </DragDropProvider>
-
-                <div class="text-slate-400 text-sm mt-4 flex flex-col sm:flex-row items-center sm:justify-between">
-                    <div class="mb-4 sm:mb-0">
-                        {remaining()} todos remaining
-                    </div>
-                    <div
-                        class="cursor-pointer hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
-                        onClick={clearCheckedTodos}
+                    <DragDropProvider
+                        onDragEnd={onDragEnd}
+                        collisionDetector={closestCenter}
                     >
-                        Clear checked todos
+                        <DragDropSensors />
+                        <ul class="mt-4">
+                            <SortableProvider ids={ids()}>
+                                <For each={todos()}>
+                                    {(todo) => (
+                                        <div class="mb-2">
+                                            <TodoItem todo={todo} />
+                                        </div>
+                                    )}
+                                </For>
+                            </SortableProvider>
+                        </ul>
+                    </DragDropProvider>
+
+                    <div class="text-slate-400 text-sm mt-4 flex flex-col sm:flex-row items-center sm:justify-between">
+                        <div class="mb-4 sm:mb-0">
+                            {remaining()} todos remaining
+                        </div>
+                        <div
+                            class="cursor-pointer hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                            onClick={clearCheckedTodos}
+                        >
+                            Clear checked todos
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
